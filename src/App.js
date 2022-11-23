@@ -50,9 +50,11 @@ const reducer = (state, action) =>{
         }
         break
       case DELETE_JOB:
+        const newJobs = [...state.jobs]
+        newJobs.splice(action.payload, 1)
         newState = {
           ...state,
-          jobs: state.jobs.splice(action.payload, 1)
+          jobs: newJobs
         }
         break
       default:
