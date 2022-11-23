@@ -50,17 +50,18 @@ const reducer = (state, action) =>{
         }
         break
       case DELETE_JOB:
-        // const newJobs = [...state.jobs]
-        // newJobs.splice(action.payload, 1)
+        const newJobs = [...state.jobs]
+        newJobs.splice(action.payload, 1)
         newState = {
           ...state,
-          jobs: state.jobs.splice(action.payload, 1)
+          jobs: newJobs
         }
         break
       default:
         throw new Error('Invalid action')
     }
     console.log('new state : ', newState);
+    console.log('jobs array : ', state.jobs);
   return newState
 }
 
