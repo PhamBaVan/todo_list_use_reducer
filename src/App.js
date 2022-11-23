@@ -50,11 +50,9 @@ const reducer = (state, action) =>{
         }
         break
       case DELETE_JOB:
-        const newJobs = [...state.jobs]
-        newJobs.splice(action.payload, 1)
         newState = {
           ...state,
-          jobs: newJobs
+          jobs: state.jobs.splice(action.payload, 1)
         }
         break
       default:
@@ -75,7 +73,7 @@ function App(){
   }
     return (
       <div style={{padding : '0 20px'}}>
-        <h3>Todo</h3>
+        <h3>Todo List</h3>
         <input 
             value={job}
             placeholder='Enter todo ...'
