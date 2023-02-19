@@ -11,3 +11,16 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.todolist-input{
+  height: 20px;
+}
+.handle-submit{
+  height: 25px;
+}
+.todo-list-title{
+  font-size: 30px;
+}
+.delete-button{
+  margin-left: 10px;
+  cursor: pointer;
+}
